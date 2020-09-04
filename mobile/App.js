@@ -65,7 +65,11 @@ export default function App() {
           component={NewTask}
           options={{
             tabBarLabel: ' ',
-            tabBarIcon: () => <View style={styles.iconTabRound}></View>,
+            tabBarIcon: () => (
+              <View style={styles.iconTabRound}>
+                <MaterialIcon name="plus" size={38} color="#fff" />
+              </View>
+            ),
           }}
         />
         <Tab.Screen

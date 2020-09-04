@@ -10,7 +10,6 @@ const Home = () => {
     <>
       <StyledContainer>
         <Grafic />
-        <StyledText>Home</StyledText>
       </StyledContainer>
     </>
   );
