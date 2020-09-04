@@ -1,10 +1,14 @@
 import React from 'react';
 import {View} from 'react-native';
 
-// import { Container } from './styles';
+import {Container, StyledTitle, StyledText} from './styles';
 
 const Profile = () => {
-  return <View />;
+  return (
+    <Container>
+      <StyledTitle>Criar nova tarefa</StyledTitle>
+    </Container>
+  );
 };
 
 export default Profile;

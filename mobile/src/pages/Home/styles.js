@@ -8,7 +8,7 @@ export const StyledContainer = styled.View`
 
 export const StyledText = styled.Text`
   font-size: 18px;
-  color: #787878;
+  color: #363636;
   font-family: 'Ubuntu-Medium';
   letter-spacing: -0.333333px;
 `;

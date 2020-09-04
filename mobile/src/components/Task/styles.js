@@ -5,7 +5,6 @@ export const Container = styled.View`
   height: 110px;
   justify-content: space-around;
   margin-bottom: 10px;
-  margin-top: 10px;
 `;
 
 export const StyledContainer = styled.View`
