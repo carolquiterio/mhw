@@ -32,9 +32,10 @@ export default function Task() {
           <StyledText>Levar papelada para o Albero</StyledText>
         </TextContainer>
         <CheckedContainer>
-          <IoniIcon name="checkmark-circle-outline" color="#bbb" size={40} />
+          <IoniIcon name="checkmark-circle-outline" color="#bbb" size={42} />
         </CheckedContainer>
       </StyledContainer>
     </Container>
   );
 }
+/*checkmark-circle */

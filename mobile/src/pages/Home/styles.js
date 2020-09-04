@@ -8,14 +8,17 @@ export const StyledContainer = styled.View`
 
 export const StyledText = styled.Text`
   font-size: 18px;
-  font-weight: 700;
   color: #787878;
+  font-family: 'Ubuntu-Medium';
+  letter-spacing: -0.333333px;
 `;
 
 export const StyledRedText = styled.Text`
+  font-family: 'Ubuntu-Medium';
   font-size: 18px;
   font-weight: 700;
   color: #b83b5e;
+  letter-spacing: -0.333333px;
 `;
 
 export const GraficContainer = styled.View`
@@ -42,4 +45,6 @@ export const NewsButton = styled.TouchableOpacity`
 export const TextButton = styled.Text`
   color: #fff;
   font-size: 14px;
+  font-family: 'Ubuntu-Medium';
+  letter-spacing: -0.333333px;
 `;

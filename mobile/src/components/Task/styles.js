@@ -17,21 +17,27 @@ export const StyledContainer = styled.View`
 `;
 
 export const StyledBoldText = styled.Text`
+  font-family: 'Ubuntu-Bold';
   color: #787878;
   font-weight: bold;
   font-size: 16px;
+  letter-spacing: -0.3px;
 `;
 
 export const StyledText = styled.Text`
+  font-family: 'Ubuntu-Regular';
   color: #787878;
   font-weight: 400;
   font-size: 16px;
+  letter-spacing: -0.3px;
 `;
 
 export const StyledLittleText = styled.Text`
+  font-family: 'Ubuntu-Regular';
   color: #787878;
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: -0.3px;
 `;
 
 export const TimeContainer = styled.View`
@@ -67,4 +73,5 @@ export const ShareButton = styled.TouchableOpacity`
   justify-content: center;
   border-radius: 15px;
   align-self: flex-end;
+  z-index: 2;
 `;
