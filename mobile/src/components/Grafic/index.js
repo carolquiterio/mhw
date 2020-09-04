@@ -18,7 +18,7 @@ const Grafic = () => {
       }}>
       <View
         style={{
-          height: 260,
+          height: 200,
           flexDirection: 'row',
           marginRight: 10,
         }}>
@@ -36,7 +36,7 @@ const Grafic = () => {
       <View style={{width: '89%'}}>
         <BarChart
           style={{
-            height: 250,
+            height: 200,
             width: '100%',
           }}
           data={data}
@@ -52,9 +52,9 @@ const Grafic = () => {
 
         <XAxis
           style={{marginHorizontal: 0, marginTop: 6, width: 330}}
-          data={XData}
-          formatLabel={(value, index) => 'day ' + value}
-          contentInset={{left: 12, right: 12}}
+          data={data}
+          formatLabel={(value, index) => 'day '}
+          contentInset={{left: 14, right: 23}}
           svg={{fontSize: 10, fill: '#757575'}}
         />
       </View>

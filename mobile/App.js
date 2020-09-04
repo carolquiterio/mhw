@@ -43,7 +43,7 @@ export default function App() {
                 break;
             }
             // You can return any component that you like here
-            return <MaterialIcon name={iconName} size={28} color="#ccc" />;
+            return <MaterialIcon name={iconName} size={28} color="#8a8a8a" />;
           },
         })}>
         <Tab.Screen
@@ -108,26 +108,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#21A29A',
   },
 });
-
-/*  screenOptions={({route}) => ({
-          tabBarIcon: ({color, size}) => {
-            let iconName;
-
-            switch (route.name) {
-              case 'Home':
-                isFocused ? (iconName = 'home') : 'home-outline';
-                break;
-              case 'Tasks':
-                iconName = 'pencil';
-                break;
-              case 'Profile':
-                iconName = 'account';
-                break;
-              default:
-                iconName = 'circle';
-                break;
-            }
-            // You can return any component that you like here
-            return <MaterialIcon name={iconName} size={28} color="#ccc" />;
-          },
-        })} */
