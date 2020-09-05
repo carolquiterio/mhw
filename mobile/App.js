@@ -10,6 +10,9 @@ import Profile from './src/pages/Profile';
 import Tasks from './src/pages/Tasks';
 import NewTask from './src/pages/NewTask';
 import CategoryCommunity from './src/pages/CategoryCommunity';
+import Coins from './src/pages/Coins';
+import NewPost from './src/pages/NewPost';
+import BoostPost from './src/pages/BoostPost';
 
 import {StyleSheet, View, StatusBar} from 'react-native';
 
@@ -20,8 +23,9 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <>
-      <StatusBar backgroundColor="#f5f5f5" barStyle="dark-content" />
       <NavigationContainer>
+        <StatusBar backgroundColor="#f5f5f5" barStyle="dark-content" />
+
         <Tab.Navigator
           screenOptions={({route}) => ({
             tabBarIcon: ({focused, color, size}) => {
@@ -67,7 +71,7 @@ export default function App() {
 
           <Tab.Screen
             name="Community"
-            component={Community}
+            component={CommunityStackScreen}
             options={{
               tabBarLabel: 'Comunidade',
             }}
@@ -87,6 +91,17 @@ export default function App() {
 
 const HomeStack = createStackNavigator();
 
+HomeStack.navigationOptions = ({navigation}) => {
+  let tabBarVisible = true;
+  if (navigation.state.index > 1) {
+    tabBarVisible = false;
+  }
+
+  return {
+    tabBarVisible,
+  };
+};
+
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator screenOptions={{headerShown: false}}>
@@ -98,6 +113,20 @@ function HomeStackScreen() {
     </HomeStack.Navigator>
   );
 }
+
+/*
+Tab.navigationOptions = ({navigation}) => {
+  let tabBarVisible = true;
+  //let routeName = navigation.state.routes[navigation.state.index].routeName;
+
+  if (navigation.state.index > 0) {
+    tabBarVisible = false;
+  }
+  return {
+    tabBarVisible,
+  };
+};
+*/
 
 const TaskStack = createStackNavigator();
 
@@ -116,10 +145,8 @@ function CommunityStackScreen() {
   return (
     <CommunityStack.Navigator screenOptions={{headerShown: false}}>
       <CommunityStack.Screen name="Community" component={Community} />
-      <CommunityStack.Screen
-        name="CategoryCommunity"
-        component={CategoryCommunity}
-      />
+      <CommunityStack.Screen name="Coins" component={Coins} />
+      <CommunityStack.Screen name="NewPost" component={NewPost} />
     </CommunityStack.Navigator>
   );
 }

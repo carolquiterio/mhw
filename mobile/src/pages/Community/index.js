@@ -1,6 +1,8 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
 
+import {useNavigation} from '@react-navigation/native';
+
 import {
   Container,
   CoinsButton,
@@ -23,14 +25,24 @@ import MaterialDesignIcon from 'react-native-vector-icons/MaterialCommunityIcons
 import CarolImage from '../../../assets/images/quadrado.jpg';
 
 const Community = () => {
+  const navigation = useNavigation();
+
+  function handleCoinsPress() {
+    navigation.navigate('Coins');
+  }
+
+  function handleNewPostPress() {
+    navigation.navigate('NewPost');
+  }
+
   return (
     <Container>
       <StyledRowContainer>
-        <NewPostButton>
+        <NewPostButton onPress={handleNewPostPress}>
           <MaterialDesignIcon name="plus" color="#fff" size={19} />
           <NewPostButtonText>{'   '}Novo post</NewPostButtonText>
         </NewPostButton>
-        <CoinsButton>
+        <CoinsButton onPress={handleCoinsPress}>
           <MaterialDesignIcon
             name="currency-usd-circle"
             color="#6D5C01"
