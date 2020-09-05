@@ -18,8 +18,25 @@ export const StyledGoBack = styled.Text`
 `;
 
 export const CoinsButton = styled.TouchableOpacity`
+  width: 38%;
+  height: 40px;
   background-color: #fbd300;
   border-radius: 20px;
   align-items: center;
   justify-content: center;
+  align-self: flex-end;
+  flex-direction: row;
+`;
+
+export const CoinsButtonText = styled.Text`
+  color: #6d5c01;
+  font-size: 14px;
+  font-family: 'Ubuntu-Medium';
+  letter-spacing: -0.333333px;
+`;
+
+export const ImageContainer = styled.View`
+  justify-content: center;
+  padding-top: 300px;
+  align-items: center;
 `;
