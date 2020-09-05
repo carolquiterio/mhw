@@ -67,7 +67,7 @@ export default function App() {
 
           <Tab.Screen
             name="Community"
-            component={CategoryCommunity}
+            component={Community}
             options={{
               tabBarLabel: 'Comunidade',
             }}
