@@ -8,9 +8,10 @@ export const StyledContainer = styled.View`
 
 export const StyledText = styled.Text`
   font-size: 18px;
-  color: #363636;
+  color: #5d5d5d;
   font-family: 'Ubuntu-Medium';
   letter-spacing: -0.333333px;
+  margin-top: 10px;
 `;
 
 export const StyledRedText = styled.Text`
@@ -19,6 +20,8 @@ export const StyledRedText = styled.Text`
   font-weight: 700;
   color: #b83b5e;
   letter-spacing: -0.333333px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 `;
 
 export const GraficContainer = styled.View`

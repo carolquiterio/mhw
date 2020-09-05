@@ -57,6 +57,7 @@ export const StyledText = styled.Text`
   color: #363636;
   font-family: 'Ubuntu-Medium';
   letter-spacing: -0.333333px;
+  margin-top: 13px;
 `;
 
 export const TasksContainer = styled.View``;

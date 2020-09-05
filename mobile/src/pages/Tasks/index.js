@@ -1,7 +1,8 @@
 import React from 'react';
 
-import {ScrollView} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
+import {ScrollView} from 'react-native';
 import {
   Container,
   DayContainer,
@@ -18,10 +19,15 @@ import Task from '../../components/Task';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tasks = () => {
-  const data = [];
+  const navigation = useNavigation();
+
+  function handleNewTaskPress() {
+    navigation.navigate('NewTask');
+  }
+
   return (
     <Container>
-      <NewTaskButton>
+      <NewTaskButton onPress={handleNewTaskPress}>
         <MaterialIcon name="plus" size={22} color="#fff" />
         <ButtonText> Nova tarefa</ButtonText>
       </NewTaskButton>
@@ -64,9 +70,11 @@ const Tasks = () => {
         <Task />
         <StyledText>Trabalho</StyledText>
         <Task />
+        <Task />
         <StyledText>Estudos</StyledText>
         <Task />
         <StyledText>Casa & Família</StyledText>
+        <Task />
         <Task />
         <StyledText>Trabalho</StyledText>
         <Task />

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.View`
   width: 100%;
-  height: 110px;
+  height: 98px;
   justify-content: space-around;
   margin-bottom: 10px;
 `;
@@ -72,5 +72,5 @@ export const ShareButton = styled.TouchableOpacity`
   justify-content: center;
   border-radius: 15px;
   align-self: flex-end;
-  z-index: 2;
+  z-index: 1;
 `;
