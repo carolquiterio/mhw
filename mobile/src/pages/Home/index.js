@@ -1,4 +1,5 @@
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 
 import {
   StyledContainer,
@@ -16,6 +17,11 @@ import Task from '../../components/Task';
 import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 
 const Home = () => {
+  const navigation = useNavigation();
+
+  function handleFollowNewsPress() {
+    navigation.navigate('CategoryCommunity');
+  }
   return (
     <>
       <StyledContainer>
@@ -29,7 +35,7 @@ const Home = () => {
         </RowContainer>
         <Task />
         <StyledText>Fique por dentro das novidades da comunidade</StyledText>
-        <NewsButton>
+        <NewsButton onPress={handleFollowNewsPress}>
           <TextButton>Acompanhar novidades {'   '}</TextButton>
           <AntDesignIcon name="arrowright" size={28} color="#fff" />
         </NewsButton>

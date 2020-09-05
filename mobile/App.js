@@ -9,6 +9,7 @@ import Community from './src/pages/Community';
 import Profile from './src/pages/Profile';
 import Tasks from './src/pages/Tasks';
 import NewTask from './src/pages/NewTask';
+import CategoryCommunity from './src/pages/CategoryCommunity';
 
 import {StyleSheet, View, StatusBar} from 'react-native';
 
@@ -51,7 +52,7 @@ export default function App() {
           })}>
           <Tab.Screen
             name="Home"
-            component={Home}
+            component={HomeStackScreen}
             options={{
               tabBarLabel: 'Inìcio',
             }}
@@ -66,7 +67,7 @@ export default function App() {
 
           <Tab.Screen
             name="Community"
-            component={Community}
+            component={CategoryCommunity}
             options={{
               tabBarLabel: 'Comunidade',
             }}
@@ -84,30 +85,42 @@ export default function App() {
   );
 }
 
+const HomeStack = createStackNavigator();
+
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator screenOptions={{headerShown: false}}>
+      <HomeStack.Screen name="Home" component={Home} />
+      <HomeStack.Screen
+        name="CategoryCommunity"
+        component={CategoryCommunity}
+      />
+    </HomeStack.Navigator>
+  );
+}
+
 const TaskStack = createStackNavigator();
 
 function TaskStackScreen() {
   return (
     <TaskStack.Navigator screenOptions={{headerShown: false}}>
       <TaskStack.Screen name="Tasks" component={Tasks} />
-      <TaskStack.Screen
-        name="NewTask"
-        component={NewTask}
-        options={{
-          headerStyle: {
-            backgroundColor: '#f5eef5',
-            shadowColor: '#f5eef5',
-            shadowOffset: {
-              width: 0,
-              height: 0,
-            },
-            shadowOpacity: 0,
-            shadowRadius: 2,
-            elevation: 0,
-          },
-        }}
-      />
+      <TaskStack.Screen name="NewTask" component={NewTask} />
     </TaskStack.Navigator>
+  );
+}
+
+const CommunityStack = createStackNavigator();
+
+function CommunityStackScreen() {
+  return (
+    <CommunityStack.Navigator screenOptions={{headerShown: false}}>
+      <CommunityStack.Screen name="Community" component={Community} />
+      <CommunityStack.Screen
+        name="CategoryCommunity"
+        component={CategoryCommunity}
+      />
+    </CommunityStack.Navigator>
   );
 }
 
