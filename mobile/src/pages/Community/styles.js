@@ -113,3 +113,10 @@ export const PostDetailsBold = styled.Text`
   font-family: 'Ubuntu-Medium';
   font-size: 16px;
 `;
+
+export const ImageContainer = styled.View`
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 14px;
+`;

@@ -17,6 +17,7 @@ import BoostPost from './src/pages/BoostPost';
 import {StyleSheet, View, StatusBar} from 'react-native';
 
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,26 +35,37 @@ export default function App() {
               switch (route.name) {
                 case 'Home':
                   iconName = focused ? 'home' : 'home-outline';
+                  color = focused ? '#B83B5E' : '#8a8a8a';
                   break;
                 case 'Tasks':
                   iconName = focused ? 'pencil' : 'pencil-outline';
+                  color = focused ? '#B83B5E' : '#8a8a8a';
                   break;
                 case 'Profile':
                   iconName = focused ? 'account' : 'account-outline';
+                  color = focused ? '#B83B5E' : '#8a8a8a';
                   break;
                 case 'Community':
-                  iconName = focused
-                    ? 'comment-processing'
-                    : 'comment-processing-outline';
+                  iconName = focused ? 'commenting' : 'commenting-o';
+                  color = focused ? '#B83B5E' : '#8a8a8a';
                   break;
                 default:
                   iconName = 'circle';
+                  color = focused ? '#B83B5E' : '#8a8a8a';
                   break;
               }
+              if (route.name == 'Community')
+                return (
+                  <FontAwesomeIcon name={iconName} size={26} color={color} />
+                );
               // You can return any component that you like here
-              return <MaterialIcon name={iconName} size={28} color="#8a8a8a" />;
+              return <MaterialIcon name={iconName} size={28} color={color} />;
             },
-          })}>
+          })}
+          tabBarOptions={{
+            activeTintColor: '#B83B5E',
+            inactiveTintColor: '#8a8a8a',
+          }}>
           <Tab.Screen
             name="Home"
             component={HomeStackScreen}

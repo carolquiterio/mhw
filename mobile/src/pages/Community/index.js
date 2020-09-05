@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, Image} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 
@@ -19,10 +19,11 @@ import {
   PostDetails,
   RowContanerBorder,
   PostDetailsBold,
+  ImageContainer,
 } from './styles';
 
 import MaterialDesignIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import CarolImage from '../../../assets/images/quadrado.jpg';
+import profileImage from '../../../assets/images/Profile.png';
 
 const Community = () => {
   const navigation = useNavigation();
@@ -55,7 +56,9 @@ const Community = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <PostContainer>
           <RowContaner>
-            <MaterialDesignIcon name="account-outline" color="pink" size={68} />
+            <ImageContainer>
+              <Image source={profileImage} />
+            </ImageContainer>
             <StyTitleContainer>
               <NameText>Carla Souza</NameText>
               <TitleText>Como eu posso abrir um MEI?</TitleText>
@@ -95,7 +98,9 @@ const Community = () => {
         </PostContainer>
         <PostContainer>
           <RowContaner>
-            <MaterialDesignIcon name="account-outline" color="pink" size={68} />
+            <ImageContainer>
+              <Image source={profileImage} />
+            </ImageContainer>
             <StyTitleContainer>
               <NameText>Carla Souza</NameText>
               <TitleText>Como eu posso abrir um MEI?</TitleText>
@@ -135,7 +140,9 @@ const Community = () => {
         </PostContainer>
         <PostContainer>
           <RowContaner>
-            <MaterialDesignIcon name="account-outline" color="pink" size={68} />
+            <ImageContainer>
+              <Image source={profileImage} />
+            </ImageContainer>
             <StyTitleContainer>
               <NameText>Carla Souza</NameText>
               <TitleText>Como eu posso abrir um MEI?</TitleText>
