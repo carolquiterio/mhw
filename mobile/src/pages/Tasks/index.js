@@ -1,8 +1,8 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
+import api from '../../services/api';
 import {useNavigation} from '@react-navigation/native';
 
-import {ScrollView} from 'react-native';
+import {ScrollView, FlatList} from 'react-native';
 import {
   Container,
   DayContainer,
@@ -20,10 +20,21 @@ import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tasks = () => {
   const navigation = useNavigation();
+  const [activities, setActivities] = useState([]);
 
   function handleNewTaskPress() {
     navigation.navigate('NewTask');
   }
+
+  async function loadTasks(){
+    const response = await api.get('/activities');
+  
+    setActivities(response.data);
+  }
+  
+  useEffect(() => {
+    loadTasks();
+  }, []);
 
   return (
     <Container>
@@ -65,22 +76,27 @@ const Tasks = () => {
           <BoldDayContainerText>5</BoldDayContainerText>
         </DayContainer>
       </ScrollView>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <StyledText>Casa & Família</StyledText>
-        <Task />
-        <StyledText>Trabalho</StyledText>
-        <Task />
-        <Task />
-        <StyledText>Estudos</StyledText>
-        <Task />
-        <StyledText>Casa & Família</StyledText>
-        <Task />
-        <Task />
-        <StyledText>Trabalho</StyledText>
-        <Task />
-        <StyledText>Estudos</StyledText>
-        <Task />
-      </ScrollView>
+      
+      <FlatList 
+            data={activities}
+            keyExtractor={ activity => String(activity.id)}
+            renderItem={({ item: activity }) => (
+            <>
+              <StyledText>Casa & Família</StyledText>
+              <Task />
+
+             <StyledText>Trabalho</StyledText>
+             <Task />
+             <Task />
+
+             <StyledText>Estudos</StyledText>
+             <Task />
+           </ >
+           )}
+        />
+
+
+
     </Container>
   );
 };
