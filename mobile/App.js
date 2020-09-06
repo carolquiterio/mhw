@@ -12,7 +12,6 @@ import NewTask from './src/pages/NewTask';
 import CategoryCommunity from './src/pages/CategoryCommunity';
 import Coins from './src/pages/Coins';
 import NewPost from './src/pages/NewPost';
-import BoostPost from './src/pages/BoostPost';
 
 import {StyleSheet, View, StatusBar} from 'react-native';
 
