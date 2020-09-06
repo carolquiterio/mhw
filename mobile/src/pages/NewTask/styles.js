@@ -90,11 +90,11 @@ export const StyledRememberText = styled.Text`
 `;
 
 export const StyledSwitch = styled.Switch`
-  margin-left: 143px;
+  margin-left: 95px;
 `;
 
 export const CategoryButtonContainer = styled.View`
-  width: 40%;
+  width: 42%;
   height: 38px;
   background-color: #ffd4ba;
   border-radius: 20px;
@@ -106,7 +106,7 @@ export const CategoryButtonContainer = styled.View`
 export const ReadyButton = styled.TouchableOpacity`
   background-color: #425195;
   width: 64%;
-  height: 38px;
+  height: 49px;
   align-items: center;
   justify-content: center;
   align-self: center;
@@ -116,7 +116,7 @@ export const ReadyButton = styled.TouchableOpacity`
 
 export const ReadyButtonText = styled.Text`
   color: #fff;
-  font-size: 16px;
+  font-size: 19px;
   font-family: 'Ubuntu-Regular';
 `;
 
