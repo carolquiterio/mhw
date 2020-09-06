@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, Image} from 'react-native';
-
 import {useNavigation} from '@react-navigation/native';
+import Post from '../../components/Post';
 
 import {
   Container,
@@ -10,20 +10,9 @@ import {
   NewPostButton,
   NewPostButtonText,
   StyledRowContainer,
-  PostContainer,
-  RowContaner,
-  NameText,
-  TitleText,
-  StyTitleContainer,
-  PostDescription,
-  PostDetails,
-  RowContanerBorder,
-  PostDetailsBold,
-  ImageContainer,
 } from './styles';
 
 import MaterialDesignIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import profileImage from '../../../assets/images/Profile.png';
 
 const Community = () => {
   const navigation = useNavigation();
@@ -53,133 +42,13 @@ const Community = () => {
         </CoinsButton>
         <MaterialDesignIcon name="bell-ring" color="#757575" size={30} />
       </StyledRowContainer>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <PostContainer>
-          <RowContaner>
-            <ImageContainer>
-              <Image source={profileImage} />
-            </ImageContainer>
-            <StyTitleContainer>
-              <NameText>Carla Souza</NameText>
-              <TitleText>Como eu posso abrir um MEI?</TitleText>
-            </StyTitleContainer>
-          </RowContaner>
-          <PostDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non
-            finibus nibh. Nulla pellentesque pellentesque dolor quis congue.
-            Nullam egestas turpis ante, id lacinia nisl pellentesque a. Proin
-            viverra lacus sem, et posuere massa eleifend ut. Quisque ut magna
-            diam. Integer viverra enim sit amet aliquet tristique.
-          </PostDescription>
-          <RowContaner>
-            <MaterialDesignIcon name="heart" color="#D50303" size={22} />
-            <PostDetails> 15{'     '}</PostDetails>
-            <MaterialDesignIcon
-              name="comment-processing"
-              color="#425195"
-              size={22}
-            />
-            <PostDetails> 5</PostDetails>
-          </RowContaner>
-          <RowContanerBorder>
-            <MaterialDesignIcon
-              name="heart-outline"
-              color="#5D5D5D"
-              size={22}
-            />
-            <PostDetailsBold>Amei!{'       '}</PostDetailsBold>
-            <MaterialDesignIcon
-              name="comment-processing-outline"
-              color="#5D5D5D"
-              size={22}
-            />
-            <PostDetailsBold> Comentar</PostDetailsBold>
-          </RowContanerBorder>
-        </PostContainer>
-        <PostContainer>
-          <RowContaner>
-            <ImageContainer>
-              <Image source={profileImage} />
-            </ImageContainer>
-            <StyTitleContainer>
-              <NameText>Carla Souza</NameText>
-              <TitleText>Como eu posso abrir um MEI?</TitleText>
-            </StyTitleContainer>
-          </RowContaner>
-          <PostDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non
-            finibus nibh. Nulla pellentesque pellentesque dolor quis congue.
-            Nullam egestas turpis ante, id lacinia nisl pellentesque a. Proin
-            viverra lacus sem, et posuere massa eleifend ut. Quisque ut magna
-            diam. Integer viverra enim sit amet aliquet tristique.
-          </PostDescription>
-          <RowContaner>
-            <MaterialDesignIcon name="heart" color="#D50303" size={22} />
-            <PostDetails> 15{'     '}</PostDetails>
-            <MaterialDesignIcon
-              name="comment-processing"
-              color="#425195"
-              size={22}
-            />
-            <PostDetails> 5</PostDetails>
-          </RowContaner>
-          <RowContanerBorder>
-            <MaterialDesignIcon
-              name="heart-outline"
-              color="#5D5D5D"
-              size={22}
-            />
-            <PostDetailsBold>Amei!{'       '}</PostDetailsBold>
-            <MaterialDesignIcon
-              name="comment-processing-outline"
-              color="#5D5D5D"
-              size={22}
-            />
-            <PostDetailsBold> Comentar</PostDetailsBold>
-          </RowContanerBorder>
-        </PostContainer>
-        <PostContainer>
-          <RowContaner>
-            <ImageContainer>
-              <Image source={profileImage} />
-            </ImageContainer>
-            <StyTitleContainer>
-              <NameText>Carla Souza</NameText>
-              <TitleText>Como eu posso abrir um MEI?</TitleText>
-            </StyTitleContainer>
-          </RowContaner>
-          <PostDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non
-            finibus nibh. Nulla pellentesque pellentesque dolor quis congue.
-            Nullam egestas turpis ante, id lacinia nisl pellentesque a. Proin
-            viverra lacus sem, et posuere massa eleifend ut. Quisque ut magna
-            diam. Integer viverra enim sit amet aliquet tristique.
-          </PostDescription>
-          <RowContaner>
-            <MaterialDesignIcon name="heart" color="#D50303" size={22} />
-            <PostDetails> 15{'     '}</PostDetails>
-            <MaterialDesignIcon
-              name="comment-processing"
-              color="#425195"
-              size={22}
-            />
-            <PostDetails> 5</PostDetails>
-          </RowContaner>
-          <RowContanerBorder>
-            <MaterialDesignIcon
-              name="heart-outline"
-              color="#5D5D5D"
-              size={22}
-            />
-            <PostDetailsBold>Amei!{'       '}</PostDetailsBold>
-            <MaterialDesignIcon
-              name="comment-processing-outline"
-              color="#5D5D5D"
-              size={22}
-            />
-            <PostDetailsBold> Comentar</PostDetailsBold>
-          </RowContanerBorder>
-        </PostContainer>
+      <ScrollView showsVerticalScrollIndicator={false}>        
+        <Post titulo="Como eu posso abrir um MEI?" descricao="Tenho um pequeno negócio e gostaria de formalizar ele. 
+            Como é o processo para começar esse formalização?" />
+
+        <Post titulo="Dicas para empreender?" descricao="Eu pensando em iniciar um restaurante. Quais os primeiros passos?" />
+        
+        
       </ScrollView>
     </Container>
   );

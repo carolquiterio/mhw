@@ -91,7 +91,7 @@ const NewPost = () => {
       <FormContainer>
         <StyledText>Titulo</StyledText>
         <InputContainer>
-          <StyledInput placeholder="Ex: Como abrir um ME"></StyledInput>
+          <StyledInput placeholder="Ex: Como abrir um MEI"></StyledInput>
         </InputContainer>
         <StyledText>Data</StyledText>
         <InputContainer>
