@@ -33,14 +33,13 @@ const Coins = () => {
   }
   return (
     <Container>
-      <StyledRowContainer>
+      <StyledRowContainer onPress={handleGoBackPress}>
         <AntDesignIcon
           name="arrowleft"
           size={20}
-          color="#fff"
-          onPress={handleGoBackPress}
+          color="#fff"          
         />
-        <StyledGoBack> Voltar</StyledGoBack>
+        <StyledGoBack>Voltar</StyledGoBack>
       </StyledRowContainer>
 
       <ImageContainer>

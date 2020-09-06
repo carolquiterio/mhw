@@ -5,7 +5,7 @@ export const Container = styled.View`
   background-color: #6a2c70;
 `;
 
-export const StyledRowContainer = styled.View`
+export const StyledRowContainer = styled.TouchableOpacity`
   flex-direction: row;
   margin-left: 30px;
   margin-top: 30px;
