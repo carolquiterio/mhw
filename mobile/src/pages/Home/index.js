@@ -25,7 +25,10 @@ const Home = () => {
   return (
     <>
       <StyledContainer>
-        <StyledText>Seu desempenho</StyledText>
+        <RowContainer>
+          <StyledText>Seu desempenho</StyledText>
+          <StyledRedText>Ver mais</StyledRedText>
+        </RowContainer>
         <GraficContainer>
           <Grafic />
         </GraficContainer>

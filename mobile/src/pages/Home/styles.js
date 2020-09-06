@@ -16,7 +16,7 @@ export const StyledText = styled.Text`
 
 export const StyledRedText = styled.Text`
   font-family: 'Ubuntu-Medium';
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #b83b5e;
   letter-spacing: -0.333333px;
