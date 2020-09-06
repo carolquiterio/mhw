@@ -53,7 +53,7 @@ const Grafic = () => {
         <XAxis
           style={{marginHorizontal: 0, marginTop: 6, width: 330}}
           data={data}
-          formatLabel={(value, index) => 'day '}
+          formatLabel={(value, index) => 'dia '}
           contentInset={{left: 14, right: 23}}
           svg={{fontSize: 10, fill: '#757575'}}
         />

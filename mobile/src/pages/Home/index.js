@@ -36,7 +36,7 @@ const Home = () => {
           <StyledText>Próxima tarefa</StyledText>
           <StyledRedText>Ver todas</StyledRedText>
         </RowContainer>
-        <Task />
+        <Task titulo="Buscar crianças na escola" horario_inicio="18:00" horario_fim="20:00" />
         <StyledText>Fique por dentro das novidades da comunidade</StyledText>
         <NewsButton onPress={handleFollowNewsPress}>
           <TextButton>Acompanhar novidades {'   '}</TextButton>
