@@ -8,7 +8,7 @@ export const Container = styled.View`
 `;
 
 export const NewTaskButton = styled.TouchableOpacity`
-  background-color: #b83b5e;
+  background-color: #3875BC;
   width: 40%;
   height: 40px;
   align-items: center;

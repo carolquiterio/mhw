@@ -29,7 +29,6 @@ const Tasks = () => {
 
   async function loadTasks(){
     const response = await api.get('/activities');
-  
     setActivities(response.data);
   }
   
@@ -77,18 +76,11 @@ const Tasks = () => {
       <FlatList 
             data={activities}
             showsVerticalScrollIndicator={false}
-            keyExtractor={ activity => String(activity.id)}
+            keyExtractor={ activity => String(activity._id)}
             renderItem={({ item: activity }) => (
             <>
-              <StyledText>Casa & Família</StyledText>
-              <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito="true" />
-
-             <StyledText>Trabalho</StyledText>
-             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito="false" />
-
-             <StyledText>Estudos</StyledText>
-             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito="false" />
-
+              <StyledText>{activity.categoria_id.nome}</StyledText>
+              <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito={activity.feito} />
            </ >
            )}
         />
