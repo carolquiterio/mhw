@@ -97,7 +97,7 @@ const NewPost = () => {
         <InputContainer>
           <StyledInput
             multiline
-            numberOfLines={12}
+            numberOfLines={8}
             placeholder="Escreva sua publicação aqui"></StyledInput>
         </InputContainer>
         <ReadyButton
