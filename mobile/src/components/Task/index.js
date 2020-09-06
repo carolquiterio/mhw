@@ -32,7 +32,15 @@ export default function Task(props) {
           <StyledText>{props.titulo}</StyledText>
         </TextContainer>
         <CheckedContainer>
-          <IoniIcon name="checkmark-circle-outline" color={props.feito == 'false'?"#bbb":"green"} size={42} />
+          <IoniIcon
+            name={
+              props.feito == 'checkmark-circle-outline'
+                ? '#bbb'
+                : 'checkmark-circle'
+            }
+            color={props.feito == 'false' ? '#bbb' : 'green'}
+            size={42}
+          />
         </CheckedContainer>
       </StyledContainer>
     </Container>
