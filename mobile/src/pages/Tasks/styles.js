@@ -18,9 +18,21 @@ export const NewTaskButton = styled.TouchableOpacity`
   flex-direction: row;
 `;
 
-export const DayContainer = styled.TouchableOpacity`
+export const DayContainerActive = styled.TouchableOpacity`
   border-radius: 10px;
   background-color: #6a2c70;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 55px;
+  height: 68px;
+`;
+
+export const DayContainer = styled.TouchableOpacity`
+  border-radius: 10px;
+  background-color: #BEBEBE;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;

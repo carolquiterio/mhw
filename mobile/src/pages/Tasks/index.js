@@ -6,6 +6,7 @@ import {ScrollView, FlatList} from 'react-native';
 import {
   Container,
   DayContainer,
+  DayContainerActive,
   DayContainerText,
   ButtonText,
   NewTaskButton,
@@ -43,14 +44,10 @@ const Tasks = () => {
         <ButtonText> Nova tarefa</ButtonText>
       </NewTaskButton>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <DayContainer>
+        <DayContainerActive>
           <DayContainerText>Seg</DayContainerText>
           <BoldDayContainerText>5</BoldDayContainerText>
-        </DayContainer>
-        <DayContainer>
-          <DayContainerText>Seg</DayContainerText>
-          <BoldDayContainerText>5</BoldDayContainerText>
-        </DayContainer>
+        </DayContainerActive>
         <DayContainer>
           <DayContainerText>Ter</DayContainerText>
           <BoldDayContainerText>6</BoldDayContainerText>
