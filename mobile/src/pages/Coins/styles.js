@@ -21,7 +21,7 @@ export const StyledGoBack = styled.Text`
 export const ImageContainer = styled.View`
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: 14px;
 `;
 
@@ -31,7 +31,7 @@ export const FormContainer = styled.View`
   border-top-left-radius: 30px;
   width: 100%;
   height: 100%;
-  padding: 50px 40px 40px 40px;
+  padding: 40px 40px 40px 40px;
   margin-top: -20px;
 `;
 
@@ -44,7 +44,7 @@ export const CoinsButton = styled.TouchableOpacity`
   justify-content: center;
   align-self: center;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 5px;
   z-index: 1;
 `;
 
@@ -65,7 +65,7 @@ export const StyledTitle = styled.Text`
 export const RowContainer = styled.View`
   flex-direction: row;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 10px;
 `;
 
 export const ColumnContainer = styled.View`
@@ -118,7 +118,7 @@ export const MimoButton = styled.TouchableOpacity`
   flex-direction: row;
   border-radius: 30px;
   align-self: center;
-  margin-top: 20px;
+  margin-top: 5px;
 `;
 
 export const MimoButtonText = styled.Text`
