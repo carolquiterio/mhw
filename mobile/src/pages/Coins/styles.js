@@ -72,7 +72,7 @@ export const ColumnContainer = styled.View`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 45px;
+  margin-right: 18px;
 `;
 
 export const StyledAction = styled.Text`
