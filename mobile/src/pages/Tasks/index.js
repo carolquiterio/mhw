@@ -81,13 +81,13 @@ const Tasks = () => {
             renderItem={({ item: activity }) => (
             <>
               <StyledText>Casa & Família</StyledText>
-              <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} />
+              <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito="true" />
 
              <StyledText>Trabalho</StyledText>
-             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} />
+             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito="false" />
 
              <StyledText>Estudos</StyledText>
-             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} />
+             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito="false" />
 
            </ >
            )}
