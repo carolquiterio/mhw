@@ -27,6 +27,10 @@ const CategoryCommunity = () => {
     navigation.goBack();
   }
 
+  function handleCoinsPress() {
+    navigation.navigate('Coins');
+  }
+
   return (
     <Container>
       <StyledRowContainer>
@@ -38,7 +42,7 @@ const CategoryCommunity = () => {
         />
         <StyledGoBack> Voltar</StyledGoBack>
       </StyledRowContainer>
-      <CoinsButton>
+      <CoinsButton onPress={handleCoinsPress}>
         <MaterialDesignIcon
           name="currency-usd-circle"
           color="#6D5C01"

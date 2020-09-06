@@ -121,6 +121,7 @@ function HomeStackScreen() {
         name="CategoryCommunity"
         component={CategoryCommunity}
       />
+      <HomeStack.Screen name="Coins" component={Coins} />
     </HomeStack.Navigator>
   );
 }
