@@ -6,6 +6,7 @@ import {
   Modal,
   View,
   Text,
+  TouchableOpacity,
   TouchableHighlight,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
@@ -21,7 +22,7 @@ import {
   StyledFirstRowContainer,
 } from './styles';
 
-import profileImage from '../../../assets/images/Profile.png';
+import profileImage from '../../../assets/images/Profile2.png';
 import IoniIcon from 'react-native-vector-icons/Ionicons';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -66,10 +67,11 @@ const Profile = () => {
                 Ligar para a Delegacia da Mulher
               </Text>
             </StyledFirstRowContainer>
-            <Text
-              onPress={() => {
+            
+            <TouchableOpacity onPress={() => {
                 setModalVisible(!modalVisible);
-              }}
+              }}>
+            <Text
               style={{
                 ...styles.modalText,
                 color: '#5d5d5d',
@@ -78,6 +80,7 @@ const Profile = () => {
               {' '}
               Agora não >
             </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>
@@ -86,7 +89,7 @@ const Profile = () => {
           <Image source={profileImage} />
         </ImageContainer>
         <StyledColumnContainer>
-          <StyledTitle>Isabora Silva</StyledTitle>
+          <StyledTitle>Isadora Silva</StyledTitle>
           <StyledAction>Desde 2020</StyledAction>
         </StyledColumnContainer>
       </StyledFirstRowContainer>
@@ -102,18 +105,22 @@ const Profile = () => {
         <FontAwesomeIcon name="commenting-o" color="#787878" size={25} />
         <StyledActionBig>{'  '} Comunidade</StyledActionBig>
       </StyledRowContainer>
+      
+      <TouchableOpacity onPress={() => {
+            setModalVisible(true);
+          }}>
       <StyledRowContainer>
         <IoniIcon
           name="help-buoy-outline"
           color="#787878"
           size={25}
-          onPress={() => {
-            setModalVisible(true);
-          }}
-        />
+          
+          />
 
         <StyledActionBig>{'  '} Preciso de ajuda!</StyledActionBig>
       </StyledRowContainer>
+      </TouchableOpacity>
+
       <StyledRowContainer>
         <IoniIcon name="log-out-outline" color="#787878" size={25} />
         <StyledActionBig>{'  '} Sair</StyledActionBig>
