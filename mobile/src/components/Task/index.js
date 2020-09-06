@@ -17,7 +17,7 @@ import {
 import IoniIcon from 'react-native-vector-icons/Ionicons';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 
-export default function Task() {
+export default function Task(props) {
   return (
     <Container>
       <ShareButton>
@@ -25,11 +25,11 @@ export default function Task() {
       </ShareButton>
       <StyledContainer>
         <TimeContainer>
-          <StyledBoldText>10:00</StyledBoldText>
-          <StyledLittleText>09:50</StyledLittleText>
+          <StyledBoldText>{props.horario_inicio}</StyledBoldText>
+          <StyledLittleText>{props.horario_fim}</StyledLittleText>
         </TimeContainer>
         <TextContainer>
-          <StyledText>Levar papelada para o Albero</StyledText>
+          <StyledText>{props.titulo}</StyledText>
         </TextContainer>
         <CheckedContainer>
           <IoniIcon name="checkmark-circle-outline" color="#bbb" size={42} />

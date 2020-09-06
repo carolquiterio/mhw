@@ -52,45 +52,46 @@ const Tasks = () => {
           <BoldDayContainerText>5</BoldDayContainerText>
         </DayContainer>
         <DayContainer>
-          <DayContainerText>Seg</DayContainerText>
-          <BoldDayContainerText>5</BoldDayContainerText>
+          <DayContainerText>Ter</DayContainerText>
+          <BoldDayContainerText>6</BoldDayContainerText>
+        </DayContainer>
+        <DayContainer>
+          <DayContainerText>Qua</DayContainerText>
+          <BoldDayContainerText>7</BoldDayContainerText>
+        </DayContainer>
+        <DayContainer>
+          <DayContainerText>Qui</DayContainerText>
+          <BoldDayContainerText>8</BoldDayContainerText>
+        </DayContainer>
+        <DayContainer>
+          <DayContainerText>Sex</DayContainerText>
+          <BoldDayContainerText>9</BoldDayContainerText>
         </DayContainer>
         <DayContainer>
           <DayContainerText>Seg</DayContainerText>
-          <BoldDayContainerText>5</BoldDayContainerText>
+          <BoldDayContainerText>10</BoldDayContainerText>
         </DayContainer>
         <DayContainer>
-          <DayContainerText>Seg</DayContainerText>
-          <BoldDayContainerText>5</BoldDayContainerText>
-        </DayContainer>
-        <DayContainer>
-          <DayContainerText>Seg</DayContainerText>
-          <BoldDayContainerText>5</BoldDayContainerText>
-        </DayContainer>
-        <DayContainer>
-          <DayContainerText>Seg</DayContainerText>
-          <BoldDayContainerText>5</BoldDayContainerText>
-        </DayContainer>
-        <DayContainer>
-          <DayContainerText>Seg</DayContainerText>
-          <BoldDayContainerText>5</BoldDayContainerText>
+          <DayContainerText>Ter</DayContainerText>
+          <BoldDayContainerText>11</BoldDayContainerText>
         </DayContainer>
       </ScrollView>
       
       <FlatList 
             data={activities}
+            showsVerticalScrollIndicator={false}
             keyExtractor={ activity => String(activity.id)}
             renderItem={({ item: activity }) => (
             <>
               <StyledText>Casa & Família</StyledText>
-              <Task />
+              <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} />
 
              <StyledText>Trabalho</StyledText>
-             <Task />
-             <Task />
+             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} />
 
              <StyledText>Estudos</StyledText>
-             <Task />
+             <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} />
+
            </ >
            )}
         />
