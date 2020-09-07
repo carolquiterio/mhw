@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src=".github/logo.png">
+    <img alt="Logo" title="#logo" width="300px" src="github/logo.png">
     <br><br>
     <b>MegaHack Women project</b>  
     <br>
@@ -36,11 +36,11 @@ The project was developed using the following technologies
 - The layout is avaible on **[Figma](<https://www.figma.com/file/nSs3Kg7UuPnKu2TN3tnaou/Megahack-Women-(Copy)?node-id=0%3A1>)**;
 
 <h1 align="center">
-    <img alt="Community" src=".github/Comunidade.jpg" width="300px">
-    <img alt="MEI" src=".github/MEICuriosidades.jpg" width="300px"> 
+    <img alt="Community" src="github/Comunidade.jpg" width="300px">
+    <img alt="MEI" src="github/MEICuriosidades.jpg" width="300px"> 
     <br>
-    <img alt="Coins" src=".github/Moedas.jpg" width="300px">
-    <img alt="Tarefas" src=".github/Tarefas.jpg" width="300px">
+    <img alt="Coins" src="github/Moedas.jpg" width="300px">
+    <img alt="Tarefas" src="github/Tarefas.jpg" width="300px">
 </h1>
 
 <a id="como-usar"></a>
@@ -50,8 +50,7 @@ The project was developed using the following technologies
 - ### **Requeriments**
 
   - It is **necessry** to have the **[Node.js](https://nodejs.org/en/)** instaled in the PC.
-  - Also, it is **needed** to have ter um a package manager be the **[NPM](https://www.npmjs.com/)** or the **[Yarn](https://yarnpkg.com/)**.
-  - Lastly it is **essential** to have an account on **[Firebase](https://firebase.google.com/)** to create your own database.
+  - Also, it is **needed** to have ter um a package manager be the **[NPM](https://www.npmjs.com/)** or the **[Yarn](https://yarnpkg.com/)**
 
 1. Make a clone :
 
