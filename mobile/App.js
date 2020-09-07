@@ -13,6 +13,7 @@ import CategoryCommunity from './src/pages/CategoryCommunity';
 import Coins from './src/pages/Coins';
 import NewPost from './src/pages/NewPost';
 import Ranking from './src/pages/Ranking';
+import Awards from './src/pages/Awards';
 
 import {StyleSheet, View, StatusBar} from 'react-native';
 
@@ -58,7 +59,7 @@ export default function App() {
                 return (
                   <FontAwesomeIcon name={iconName} size={26} color={color} />
                 );
-              // You can return any component that you like here
+
               return <MaterialIcon name={iconName} size={28} color={color} />;
             },
           })}
@@ -124,23 +125,10 @@ function HomeStackScreen() {
       />
       <HomeStack.Screen name="Coins" component={Coins} />
       <HomeStack.Screen name="Ranking" component={Ranking} />
+      <HomeStack.Screen name="Awards" component={Awards} />
     </HomeStack.Navigator>
   );
 }
-
-/*
-Tab.navigationOptions = ({navigation}) => {
-  let tabBarVisible = true;
-  //let routeName = navigation.state.routes[navigation.state.index].routeName;
-
-  if (navigation.state.index > 0) {
-    tabBarVisible = false;
-  }
-  return {
-    tabBarVisible,
-  };
-};
-*/
 
 const TaskStack = createStackNavigator();
 
@@ -161,6 +149,7 @@ function CommunityStackScreen() {
       <CommunityStack.Screen name="Community" component={Community} />
       <CommunityStack.Screen name="Coins" component={Coins} />
       <CommunityStack.Screen name="NewPost" component={NewPost} />
+      <HomeStack.Screen name="Awards" component={Awards} />
     </CommunityStack.Navigator>
   );
 }
@@ -182,44 +171,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#21A29A',
   },
 });
-
-/**<Tab.Screen
-          name="NewTask"
-          component={NewTask}
-          options={{
-            tabBarLabel: ' ',
-            tabBarIcon: () => (
-              <View style={styles.iconTabRound}>
-                <MaterialIcon name="plus" size={38} color="#fff" />
-              </View>
-            ),
-          }}
-        /> */
-
-/**const CameraStack = createStackNavigator();
-
-function CameraStackScreen() {
-  return (
-    <CameraStack.Navigator>
-      <CameraStack.Screen
-        name="Camera"
-        component={Camera}
-        options={{
-          headerTitle: props => MenuFunction(),
-          headerStyle: {
-            backgroundColor: '#f5eef5',
-            shadowColor: '#f5eef5',
-            shadowOffset: {
-              width: 0,
-              height: 0,
-            },
-            shadowOpacity: 0,
-            shadowRadius: 2,
-            elevation: 0,
-          },
-        }}
-      />
-    </CameraStack.Navigator>
-  );
-}
- */

@@ -84,12 +84,14 @@ export const ColumnContainer = styled.View`
 
 export const ImageContainer = styled.View`
   position: absolute;
-  margin-top: -19%;
-  margin-left: -11%;
+  margin-left: 60%;
+  margin-top: 13%;
 `;
 
-export const StyledImage = styled(Image)`
-  transform: scale(0.4);
+export const ImageContainer2 = styled.View`
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 18.5%;
 `;
 
 export const RankContainer1 = styled.View`

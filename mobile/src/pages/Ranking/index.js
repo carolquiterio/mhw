@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {
@@ -12,7 +12,6 @@ import {
   StyledRow,
   StyledMediumText,
   StyledButton,
-  ColumnContainer,
   StyledButtonText,
   ImageContainer,
   StyledImage,
@@ -20,11 +19,15 @@ import {
   StyledButton1,
   RankContainer2,
   RankContainer1,
+  ImageContainer2,
 } from './styles';
 
 import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-import profileImage from '../../../assets/images/girl.png';
+
+import profileImage from '../../../assets/images/girl2.png';
+import profileImage2 from '../../../assets/images/girl3.png';
+import profileImage3 from '../../../assets/images/girl4.png';
 
 const Ranking = () => {
   const navigation = useNavigation();
@@ -49,14 +52,14 @@ const Ranking = () => {
           <StyledRowContainer>
             <FontAwesome5Icon name="award" size={26} color="#FBD300" />
             <StyledText>Liana Silva</StyledText>
+            <ImageContainer>
+              <Image source={profileImage3} />
+            </ImageContainer>
           </StyledRowContainer>
           <StyledMediumText>Gestora</StyledMediumText>
           <StyledButton2>
             <StyledButtonText>Ver mais</StyledButtonText>
           </StyledButton2>
-          <ImageContainer>
-            <StyledImage source={profileImage} />
-          </ImageContainer>
         </RankContainer2>
         <RankContainer>
           <StyledRowContainer>
@@ -67,9 +70,9 @@ const Ranking = () => {
           <StyledButton>
             <StyledButtonText>Ver mais</StyledButtonText>
           </StyledButton>
-          <ImageContainer>
-            <StyledImage source={profileImage} />
-          </ImageContainer>
+          <ImageContainer2>
+            <Image source={profileImage} />
+          </ImageContainer2>
         </RankContainer>
         <RankContainer1>
           <StyledRowContainer>
@@ -80,9 +83,9 @@ const Ranking = () => {
           <StyledButton1>
             <StyledButtonText>Ver mais</StyledButtonText>
           </StyledButton1>
-          <ImageContainer>
-            <StyledImage source={profileImage} />
-          </ImageContainer>
+          <ImageContainer2>
+            <Image source={profileImage2} />
+          </ImageContainer2>
         </RankContainer1>
         <RankContainer>
           <StyledRowContainer>
@@ -94,7 +97,7 @@ const Ranking = () => {
             <StyledButtonText>Ver mais</StyledButtonText>
           </StyledButton>
           <ImageContainer>
-            <StyledImage source={profileImage} />
+            <Image source={profileImage} />
           </ImageContainer>
         </RankContainer>
       </ScrollView>
