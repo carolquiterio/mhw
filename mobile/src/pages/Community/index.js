@@ -1,5 +1,6 @@
-import React from 'react';
-import {ScrollView, Image} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import {ScrollView, Image, FlatList} from 'react-native';
+import api from '../../services/api';
 import {useNavigation} from '@react-navigation/native';
 import Post from '../../components/Post';
 
@@ -16,6 +17,16 @@ import MaterialDesignIcon from 'react-native-vector-icons/MaterialCommunityIcons
 
 const Community = () => {
   const navigation = useNavigation();
+  const [posts, setPosts] = useState([]);
+  
+  async function loadPosts(){
+    const response = await api.get('/posts');
+    setPosts(response.data);
+  }
+  
+  useEffect(() => {
+    loadPosts();
+  }, []);
 
   function handleCoinsPress() {
     navigation.navigate('Coins');
@@ -42,14 +53,14 @@ const Community = () => {
         </CoinsButton>
         <MaterialDesignIcon name="bell-ring" color="#757575" size={30} />
       </StyledRowContainer>
-      <ScrollView showsVerticalScrollIndicator={false}>        
-        <Post titulo="Como eu posso abrir um MEI?" descricao="Tenho um pequeno negócio e gostaria de formalizar ele. 
-            Como é o processo para começar esse formalização?" />
-
-        <Post titulo="Dicas para empreender?" descricao="Eu pensando em iniciar um restaurante. Quais os primeiros passos?" />
-        
-        
-      </ScrollView>
+      <FlatList 
+            data={posts}
+            showsVerticalScrollIndicator={false}
+            keyExtractor={ post => String(post._id)}
+            renderItem={({ item: post }) => (
+            <Post post_id={post._id} titulo={post.titulo} descricao={post.descricao} likes={post.likes} nome={post.usuario_id.nome} foto={post.usuario_id.foto_url} />
+           )}
+        />
     </Container>
   );
 };

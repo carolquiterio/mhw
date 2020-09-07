@@ -69,3 +69,9 @@ export const ImageContainer = styled.View`
   justify-content: center;
   align-items: center;
 `;
+
+export const ImageIcon = styled.Image`
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+`;

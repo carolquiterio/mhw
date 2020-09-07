@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View, Image} from 'react-native';
 import MaterialDesignIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import profileImage from '../../../assets/images/Profile.png';
+import api from '../../services/api';
 
 import {
     PostContainer,
@@ -14,20 +14,29 @@ import {
     RowContanerBorder,
     PostDetailsBold,
     ImageContainer,
+    ImageIcon,
   } from './styles';
   
 import IoniIcon from 'react-native-vector-icons/Ionicons';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 
 export default function Post(props) {
+  const [liked, setLiked] = useState(false);
+
+  async function handleLike(post_id, likes_atual){
+    // const response = await api.post(`/posts/${post_id}/likes`);
+  
+    setLiked(true);
+  }
+
   return (
     <PostContainer>
           <RowContaner>
             <ImageContainer>
-              <Image source={profileImage} />
+              <ImageIcon source={{ uri: props.foto }} />
             </ImageContainer>
             <StyTitleContainer>
-              <NameText>Carla Souza</NameText>
+              <NameText>{props.nome}</NameText>
             <TitleText>{props.titulo}</TitleText>
             </StyTitleContainer>
           </RowContaner>
@@ -36,19 +45,20 @@ export default function Post(props) {
           </PostDescription>
           <RowContaner>
             <MaterialDesignIcon name="heart" color="#D50303" size={22} />
-            <PostDetails> 15{'     '}</PostDetails>
+            <PostDetails> {props.likes}{'     '}</PostDetails>
             <MaterialDesignIcon
               name="comment-processing"
               color="#425195"
               size={22}
             />
-            <PostDetails> 5</PostDetails>
+            <PostDetails> 1</PostDetails>
           </RowContaner>
           <RowContanerBorder>
             <MaterialDesignIcon
               name="heart-outline"
-              color="#5D5D5D"
+              color={liked?"red":"#5D5D5D"}
               size={22}
+              onPress={() => handleLike(props.post_id, props.likes)}
             />
             <PostDetailsBold>Amei!{'       '}</PostDetailsBold>
             <MaterialDesignIcon
