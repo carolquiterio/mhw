@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {View} from 'react-native';
+import api from '../../services/api';
 
 import {
   StyledContainer,
