@@ -42,13 +42,17 @@ const Community = () => {
         </CoinsButton>
         <MaterialDesignIcon name="bell-ring" color="#757575" size={30} />
       </StyledRowContainer>
-      <ScrollView showsVerticalScrollIndicator={false}>        
-        <Post titulo="Como eu posso abrir um MEI?" descricao="Tenho um pequeno negócio e gostaria de formalizar ele. 
-            Como é o processo para começar esse formalização?" />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Post
+          titulo="Como eu posso abrir um MEI?"
+          descricao="Tenho um pequeno negócio e gostaria de formalizar ele. 
+            Como é o processo para começar esse formalização?"
+        />
 
-        <Post titulo="Dicas para empreender?" descricao="Eu pensando em iniciar um restaurante. Quais os primeiros passos?" />
-        
-        
+        <Post
+          titulo="Dicas para empreender?"
+          descricao="Eu pensando em iniciar um restaurante. Quais os primeiros passos?"
+        />
       </ScrollView>
     </Container>
   );
