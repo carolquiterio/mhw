@@ -16,7 +16,6 @@ import {
 
 import IoniIcon from 'react-native-vector-icons/Ionicons';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
-import api from '../../services/api';
 
 export default function Task(props) {
   const [feito, setFeito] = useState(props.feito);
@@ -43,7 +42,7 @@ export default function Task(props) {
           <StyledText>{props.titulo}</StyledText>
         </TextContainer>
         <CheckedContainer onPress={() => handleCheck(props.atividade_id)}>
-          <IoniIcon name="checkmark-circle-outline" color={feito == false?"#bbb":"green"} size={42} />
+          <IoniIcon name={feito?'checkmark-circle':'checkmark-circle-outline'} color={feito == false?"#bbb":"green"} size={42} />
         </CheckedContainer>
       </StyledContainer>
     </Container>

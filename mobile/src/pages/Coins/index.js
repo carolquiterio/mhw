@@ -28,17 +28,19 @@ import {
 
 const Coins = () => {
   const navigation = useNavigation();
+
   function handleGoBackPress() {
     navigation.goBack();
   }
+
+  function handleAwardPress() {
+    navigation.navigate('Awards');
+  }
+
   return (
     <Container>
       <StyledRowContainer onPress={handleGoBackPress}>
-        <AntDesignIcon
-          name="arrowleft"
-          size={20}
-          color="#fff"          
-        />
+        <AntDesignIcon name="arrowleft" size={20} color="#fff" />
         <StyledGoBack>Voltar</StyledGoBack>
       </StyledRowContainer>
 
@@ -93,9 +95,9 @@ const Coins = () => {
         <StyledActionCoins>
           Você pode ganhar até 16 moedas diárias!
         </StyledActionCoins>
-        <MimoButton>
+        <MimoButton onPress={handleAwardPress}>
           <FeatherIcon name="gift" color="#fff" size={18} />
-          <MimoButtonText> {'   '}Resgatar mimo</MimoButtonText>
+          <MimoButtonText> {'   '}Resgatar prêmio</MimoButtonText>
         </MimoButton>
         <StyledActionCoins>Você precisa de 1.000 moedas!</StyledActionCoins>
       </FormContainer>
