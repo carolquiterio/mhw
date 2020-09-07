@@ -12,6 +12,7 @@ import NewTask from './src/pages/NewTask';
 import CategoryCommunity from './src/pages/CategoryCommunity';
 import Coins from './src/pages/Coins';
 import NewPost from './src/pages/NewPost';
+import Ranking from './src/pages/Ranking';
 
 import {StyleSheet, View, StatusBar} from 'react-native';
 
@@ -122,6 +123,7 @@ function HomeStackScreen() {
         component={CategoryCommunity}
       />
       <HomeStack.Screen name="Coins" component={Coins} />
+      <HomeStack.Screen name="Ranking" component={Ranking} />
     </HomeStack.Navigator>
   );
 }

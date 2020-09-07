@@ -89,7 +89,7 @@ const NewPost = () => {
       <StyledTitle>Escreva sua publicação</StyledTitle>
 
       <FormContainer>
-        <StyledText>Titulo</StyledText>
+        <StyledText>Título</StyledText>
         <InputContainer>
           <StyledInput placeholder="Ex: Como abrir um MEI"></StyledInput>
         </InputContainer>

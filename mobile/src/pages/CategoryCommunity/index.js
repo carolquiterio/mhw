@@ -31,6 +31,10 @@ const CategoryCommunity = () => {
     navigation.navigate('Coins');
   }
 
+  function handleCategoryPress() {
+    navigation.navigate('Ranking');
+  }
+
   return (
     <Container>
       <StyledRowContainer>
@@ -55,15 +59,14 @@ const CategoryCommunity = () => {
         <Image source={HeroEmployerImage} />
       </ImageContainer>
       <StyledText>
-        Troque experiências, divulgue seu trabalho, dicas para a gestão do seu
-        tempo. Junte moedas e troque por brindes!
+        Conheça as empreendedoras destaques da comunidade!
       </StyledText>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <CategoryContainer>
-          <CategoryTitle>MEI</CategoryTitle>
+          <CategoryTitle onPress={handleCategoryPress}>MEI</CategoryTitle>
         </CategoryContainer>
         <CategoryContainer>
-          <CategoryTitle>Estresse</CategoryTitle>
+          <CategoryTitle>Inovação</CategoryTitle>
         </CategoryContainer>
         <CategoryContainer>
           <CategoryTitle>Empreendedorismo</CategoryTitle>
