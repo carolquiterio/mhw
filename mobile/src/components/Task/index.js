@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {View} from 'react-native';
 
 import {
@@ -20,11 +20,11 @@ import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 export default function Task(props) {
   const [feito, setFeito] = useState(props.feito);
 
-  async function handleCheck(activity_id){
+  async function handleCheck(activity_id) {
     const response = await api.put(`/activities/${activity_id}`, {
-      feito: true
+      feito: true,
     });
-  
+
     setFeito(true);
   }
 
@@ -40,9 +40,15 @@ export default function Task(props) {
         </TimeContainer>
         <TextContainer>
           <StyledText>{props.titulo}</StyledText>
+          <StyledText> </StyledText>
+          <StyledText>{props.usuario_id}</StyledText>
         </TextContainer>
         <CheckedContainer onPress={() => handleCheck(props.atividade_id)}>
-          <IoniIcon name={feito?'checkmark-circle':'checkmark-circle-outline'} color={feito == false?"#bbb":"green"} size={42} />
+          <IoniIcon
+            name={feito ? 'checkmark-circle' : 'checkmark-circle-outline'}
+            color={feito == false ? '#bbb' : 'green'}
+            size={42}
+          />
         </CheckedContainer>
       </StyledContainer>
     </Container>

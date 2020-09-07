@@ -94,10 +94,10 @@ const Awards = () => {
               </IconContainer>
               <StyledColumnContainer>
                 <RowAwardContainer>
-                  <ContainerTitle>Excel básico</ContainerTitle>
+                  <ContainerTitle>Inovação</ContainerTitle>
                 </RowAwardContainer>
-                <ContainerText>100% de bolsa</ContainerText>
-                <ContainerText>Duração: 2 meses</ContainerText>
+                <ContainerText>50% de bolsa</ContainerText>
+                <ContainerText>Duração: 3 meses</ContainerText>
                 <ContainerText>on-line</ContainerText>
               </StyledColumnContainer>
             </RowAwardContainer>
@@ -120,10 +120,10 @@ const Awards = () => {
               </CoinsButton>
               <StyledColumnContainer>
                 <RowAwardContainer>
-                  <ContainerTitle>Excel básico</ContainerTitle>
+                  <ContainerTitle>Inglês</ContainerTitle>
                 </RowAwardContainer>
                 <ContainerText>100% de bolsa</ContainerText>
-                <ContainerText>Duração: 2 meses</ContainerText>
+                <ContainerText>Duração: 3 meses</ContainerText>
                 <ContainerText>on-line</ContainerText>
               </StyledColumnContainer>
             </RowAwardContainer>
@@ -147,7 +147,7 @@ const Awards = () => {
 
               <StyledColumnContainer>
                 <RowAwardContainer>
-                  <ContainerTitle>Excel básico</ContainerTitle>
+                  <ContainerTitle>E-book de design</ContainerTitle>
                 </RowAwardContainer>
                 <ContainerText>100% de bolsa</ContainerText>
                 <ContainerText>Duração: 2 meses</ContainerText>
