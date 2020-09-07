@@ -93,9 +93,10 @@ const NewPost = () => {
         <InputContainer>
           <StyledInput placeholder="Ex: Como abrir um MEI"></StyledInput>
         </InputContainer>
-        <StyledText>Data</StyledText>
+        <StyledText>Descrição</StyledText>
         <InputContainer>
           <StyledInput
+            textAlignVertical="top"
             multiline
             numberOfLines={8}
             placeholder="Escreva sua publicação aqui"></StyledInput>
