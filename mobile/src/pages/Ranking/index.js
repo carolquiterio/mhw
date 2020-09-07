@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, ScrollView} from 'react-native';
+import {ScrollView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {
@@ -25,8 +25,6 @@ import {
 import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import profileImage from '../../../assets/images/girl.png';
-import profileImagee from '../../../assets/images/girl2.png';
-import profileImageee from '../../../assets/images/girl3.png';
 
 const Ranking = () => {
   const navigation = useNavigation();
