@@ -50,8 +50,7 @@ The project was developed using the following technologies
 - ### **Requeriments**
 
   - It is **necessry** to have the **[Node.js](https://nodejs.org/en/)** instaled in the PC.
-  - Also, it is **needed** to have ter um a package manager be the **[NPM](https://www.npmjs.com/)** or the **[Yarn](https://yarnpkg.com/)**.
-  - Lastly it is **essential** to have an account on **[Firebase](https://firebase.google.com/)** to create your own database.
+  - Also, it is **needed** to have ter um a package manager be the **[NPM](https://www.npmjs.com/)** or the **[Yarn](https://yarnpkg.com/)**
 
 1. Make a clone :
 
