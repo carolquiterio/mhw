@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View} from 'react-native';
 
 import {
@@ -16,8 +16,19 @@ import {
 
 import IoniIcon from 'react-native-vector-icons/Ionicons';
 import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
+import api from '../../services/api';
 
 export default function Task(props) {
+  const [feito, setFeito] = useState(props.feito);
+
+  async function handleCheck(activity_id){
+    const response = await api.put(`/activities/${activity_id}`, {
+      feito: true
+    });
+  
+    setFeito(true);
+  }
+
   return (
     <Container>
       <ShareButton>
@@ -31,8 +42,8 @@ export default function Task(props) {
         <TextContainer>
           <StyledText>{props.titulo}</StyledText>
         </TextContainer>
-        <CheckedContainer>
-          <IoniIcon name="checkmark-circle-outline" color={props.feito == 'false'?"#bbb":"green"} size={42} />
+        <CheckedContainer onPress={() => handleCheck(props.atividade_id)}>
+          <IoniIcon name="checkmark-circle-outline" color={feito == false?"#bbb":"green"} size={42} />
         </CheckedContainer>
       </StyledContainer>
     </Container>

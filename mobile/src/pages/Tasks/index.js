@@ -80,7 +80,7 @@ const Tasks = () => {
             renderItem={({ item: activity }) => (
             <>
               <StyledText>{activity.categoria_id.nome}</StyledText>
-              <Task titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito={activity.feito} />
+              <Task atividade_id={activity._id} titulo={activity.titulo} horario_inicio={activity.horario_inicio} horario_fim={activity.horario_fim} feito={activity.feito} />
            </ >
            )}
         />

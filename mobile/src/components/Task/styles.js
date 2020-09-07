@@ -56,7 +56,7 @@ export const TextContainer = styled.View`
   height: 100%;
 `;
 
-export const CheckedContainer = styled.View`
+export const CheckedContainer = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   align-self: flex-end;
