@@ -25,8 +25,8 @@ export default function Post(props) {
 
   async function handleLike(post_id, likes_atual) {
     // const response = await api.post(`/posts/${post_id}/likes`);
-
-    setLiked(true);
+    if (liked) setLiked(false);
+    else setLiked(true);
   }
 
   return (

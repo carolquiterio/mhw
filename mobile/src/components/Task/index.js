@@ -26,7 +26,8 @@ export default function Task(props) {
       feito: true,
     });
 
-    setFeito(true);
+    if (!feito) setFeito(true);
+    else setFeito(false);
   }
 
   return (
