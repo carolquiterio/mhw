@@ -33,7 +33,7 @@ The project was developed using the following technologies
 
 ## :heavy_check_mark: :iphone: Mobile
 
-- The layout is avaible on **[Figma](<https://www.figma.com/file/nSs3Kg7UuPnKu2TN3tnaou/Megahack-Women-(Copy)?node-id=0%3A1>)**;
+- The layout is avaible on **[Figma](https://bit.ly/35ePWwn)**;
 
 <h1 align="center">
     <img alt="Community" src="github/Comunidade.jpg" width="300px">
